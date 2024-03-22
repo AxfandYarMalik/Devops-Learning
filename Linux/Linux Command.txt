@@ -1,0 +1,218 @@
+To know any command uses 
+# man command-name
+
+--------------------------
+
+Basic Command
+# whoami	To Know user
+# pwd 		Present working directory
+# cd		current directory
+# echo "hello world"		print in linux
+# sudo bash		root user
+
+-------------------------
+
+Add user in system
+# sudo useradd khan		add user khan
+# sudo passwd khan		add user password
+
+-------------------------
+
+Add Group in system
+# sudo userdel khan		del user khan
+# sudo groupadd techies		add group to system techies
+
+------------------------
+
+Create file in linux
+# touch asfand.txt		touch is command to create file asfand.txt
+# sudo vi asfand.txt		vi text-editor for asfand.txt (:wq)
+
+------------------------
+
+Move or copy command from one directory to another
+#mv asfand.txt /home		move asfand.txt to home directory from present directory
+
+Delete a file 
+# rm asfand.txt
+
+Make new directory
+# mkdir /home/techies/ 		new directory in home directory
+
+Remove directory command
+# rmdir techies			removing previous created directory techies
+
+------------------------
+
+Grep Command to search word or string in a text file
+# grep dog asfand_file.txt	dog is word search in txt-file - if nothing show word or string is not present in file
+
+-i 	return result for case-sensitive strings
+-n 	return result with matching string with line number
+-v 	return result of line not matching search string
+-c	return no of line in which result match the search string
+
+-----------------------
+
+sort command
+# sort sort.txt		sort content in file alphabatically or numerically
+
+-r	return in reverse order
+-f	case sensitive sorting
+-n 	return as per numerical order
+
+---------------------------------------------------------------
+
+Three types of permission in linux read permission, write permission, execute permission
+Read permission also to read directory and sub-directory
+Write permission to write or modify or delete a file & modify it content for directories
+Execute permission will allow user to run a file
+
+-------------------------------------------------
+
+What are the 3 groups of file permissions in Linux?
+The first set of permissions applies to the owner of the file. The second set of permissions applies to the user group that owns the file. The third set of permissions is generally referred to as "others." All Linux files belong to an owner and a group.
+
+--------------------------------------------
+
+To change file ownership in Linux, you use the 'chown' command. The syntax for its use is, chown [new_user] [filename]. In this example, we're using the 'sudo' command to run 'chown' with administrative privileges.
+
+--------------------------------------------
+Chown Command
+
+# Chown root test.txt		Test.txt change owner to root user
+
+--------------------------------------------
+
+Change permission & pervilages of file
+
+Chmod Command
+
+# chmod 777 test.txt		chnage pervilages of file from -rw-r--r-- to -rwxrwxrw
+
+---------------------------------------------
+
+Ls (list of open files) Command of linux
+
+# lsof		list of files opened
+# lsof -u asfand		list of command opened by user asfand
+
+---------------------------------------------
+ id command is a basic Linux command used to confirm the identity of a specified Linux user
+
+Id Command (id flag username)
+
+# id	
+# id -u asfand		user id of user
+# id -g asfand		group id of user
+# id user-name		get another user identity
+
+----------------------------------------------		
+
+'tar' is a command in Linux used for creating, viewing, and extracting files from archives.
+
+zip command ( tar -cvf fileneame source-folder ) &  unzip command ( tar -xvf tar-file-name)
+
+----------------------------------------------
+
+'cut' command in Linux is a text processing utility that allows you to 'cut out' or extract specific sections of each line of a file.
+
+# cut -c1-2 demo.txt		-c for column 1 & 2 for column 1 and 2 ( column 1 & 2 will only show)
+
+----------------------------------------------
+sed is a stream editor, and it can be used to edit text files, with its most common use being to replace occurrences of words in a files. 
+
+# sed 's/khan/faraz/' sedtest.txt		s is flag khan is replace by faraz
+
+----------------------------------------------
+The 'uniq' command in Linux is a command-line utility that helps you filter out repeated lines in a file.
+(uniq filename)
+
+# uniq filename
+
+----------------------------------------------
+ Linux watch command lets you repeatedly run a command or utility in regular time intervals.
+( watch flag command )
+
+----------------------------------------------
+ On a Unix or Linux system, the eval command is used to run the arguments as a shell command. When you have a Unix or Linux command saved in a variable and wish to run that command, the eval command is useful. The command evaluates the argument first, then executes the command it contains.
+
+Eval command ( eval args )
+
+# eval --help		this command show discription of eval command
+
+----------------------------------------------
+History command to show every executed command
+
+# history		show all executed command
+# history 5		show only last 5 executed command
+
+----------------------------------------------
+The 'dd' command reads input from a file or a device, and writes it to another file or device. Both input and output can be anything that resembles a file. This is why 'dd' can be used to perform tasks such as copying disks.
+
+syntax ( option=value )
+
+# dd if = /dev/hde of = /dev/hdb		sample working of dd command "if" is input file & "of" is output file, /dev/hde & /dev/hdb are hard-disk supposed dd file take input from /dev/hde and write it to output file /dev/hdb hard-disk
+
+----------------------------------------
+'free' command? The free command is a Linux command that allows you to check for memory RAM on your system or to check the memory statics of the Linux operating system.
+
+Syntax ( free flag)
+
+# free 		memory  on system
+# free -b	memory in bytes
+
+-----------------------------------------
+ssh command provides a secure encrypted connection between two hosts over an insecure network. This connection can also be used for terminal access, file transfers, and for tunneling other applications. Graphical X11 applications can also be run securely over SSH from a remote location.
+
+# ssh master-ip(adrress)		if u are running slave node this will give acess to master node 
+# ssh slave-ip(address)			if u are running master node this will give you acess to slave node 
+# ssh-keygen 				ssh-keygen command is a component of most SSH implementations used to generate a public key pair for use when 						authenticating with a remote server. 	
+
+# ssh-keygen -t rsa		-t is use to specify type of key, empty passphrase
+
+---------------------------------------------------
+The ifconfig command is usually run when a system boots up. In this case, the parameters of the commands are read from a file. Once the Linux system is running, the ifconfig command can be used to modify the network configuration parameters.
+
+syntax (Ifconfig option interface)
+
+# ifconfig -a		all interfaces avaliable even its down
+# ifconfig -s		short list
+# ipconfig		ip number of your machine
+
+------------------------------------------------
+ 'ipconfig' command in Linux, represented by 'ifconfig' or 'ip', is a versatile tool for network administration. It provides information about the network interfaces and allows you to configure them
+configure network interface, listing ip address. modify status of interface
+
+
+# ip address		this command is use to show all ip address associated on all network devices
+# ip link		use to display link layer information
+
+-------------------------------------
+Linux netstat command stands for Network statistics. It displays information about different interface statistics, including open sockets, routing tables, and connection information.
+
+# netstat -a		show listening and non-listening ports that are avaliable 
+# netstat -at		all tcp port avaliable
+
+-------------------------------------
+Nslookup (stands for “Name Server Lookup”) is a useful command for getting information from the DNS server. It is a network administration tool for querying the Domain Name System (DNS) to obtain domain name or IP address mapping or any other specific DNS record. It is also used to troubleshoot DNS-related problems. 
+{ Domain Name System (DNS) is the phonebook of the Internet. When users type domain names such as ‘google.com’ or ‘nytimes.com’ into web browsers, DNS is responsible for finding the correct IP address for those sites. }
+
+syntax ( nslookup option )
+
+# nslookup google.com		this will give details of domain name
+# nslookup 8.8.8.8		 You can also do the reverse DNS look-up by providing the IP Address as an argument to nslookup. 
+
+--------------------------------------------
+Client URL (cURL, pronounced “curl”) is a command line tool that enables data exchange between a device and a server through a terminal with protocol such as http, ftp, scp, smptp. Using this command line interface (CLI), a user specifies a server URL (the location where they want to send a request) and the data they want to send to that server URL.
+
+syntax ( curl options url )
+
+#
+
+
+
+
+
+
+
