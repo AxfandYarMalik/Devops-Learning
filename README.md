@@ -1,10 +1,35 @@
 # Devops-
-Learning Devops
+Learning Devops Basics
 
-#Docker
+# Start
+ - Linux Installation
 
-## Steps
-- Step 01 - Docker and DevOps - Installation and Introduction
+1. GIT
+ - Base Commands
+ - Pull Request
+ - Branching
+ - Merging
+
+2. Linux Basics
+ - Shell Commands
+ - File Systems
+ - Networking
+ - Command Line Editor " Vim / Nano "
+
+3. Networking & Security
+ - OSI Model
+ - DNS
+ - HTTP / HTTPS
+ - SMTP
+ - SSH
+ 
+4. Server Management
+ - Reverse Proxy / Forward Proxy
+ - Caching Server
+ - Firewall
+
+5. Docker
+ - Step 01 - Docker and DevOps - Installation and Introduction
 - Step 02 - Your First Docker Usecase
 - Step 03 - Important Docker Concepts - Registry, Repository, Tag, Image and Container
 - Step 04 - Playing with Docker Images - Java, JavaScript and Python
@@ -29,3 +54,11 @@ Learning Devops
 - Step 23 - Using Custom Networking to Connect Microservices
 - Step 24 - Using Docker Compose to Simplify Microservices Launch
 - Step 25 - Understanding Docker Compose further
+
+
+
+
+
+
+
+
